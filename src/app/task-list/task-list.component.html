@@ -1,1 +1,8 @@
-<p>task-list works!</p>
+<mat-list>
+    <app-task-item
+     *ngFor="let task of tasks"
+     [task]="task"
+     (performTask)="onPerformTask($event)"
+    >
+    </app-task-item>
+</mat-list>
