@@ -1,0 +1,14 @@
+<h1 mat-dialog-title> Nova tarefa </h1>
+
+<mat-dialog-content>
+
+    <mat-form-field>
+        <input type="text" matInput>
+    </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close> Cancelar </button>
+    <button mat-button (click)="onSave()"> Salvar </button>
+</mat-dialog-actions>

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { MatToolbarModule, MatListModule, MatLineModule} from '@angular/material';
+import { MatToolbarModule, MatListModule, MatLineModule, MatButtonModule, MatIconModule, MatDialogModule, MatDialog, MatInputModule, MatFormFieldModule} from '@angular/material';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   
 import { AppComponent } from './app.component';
@@ -12,12 +12,17 @@ import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskItemComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskDialogComponent
+  ],
+  entryComponents:[
+    TaskDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,12 @@ import { TaskListComponent } from './task-list/task-list.component';
     MatToolbarModule,
     MatListModule,
     MatLineModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [
     TaskService
