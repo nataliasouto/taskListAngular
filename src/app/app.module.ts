@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
+    FormsModule,
   ],
   providers: [
     TaskService
