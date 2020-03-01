@@ -1,6 +1,6 @@
 # TaskList
 
-Projeto gerado em Angular CLI 8
+Projeto gerado com Angular CLI 8
 
 # Instalação
 
@@ -8,4 +8,5 @@ Projeto gerado em Angular CLI 8
 $ git clone https://github.com/nataliasouto/taskListAngular.git
 $ cd taskListAngular
 $ npm install
+$ ng serve -o
 ```
