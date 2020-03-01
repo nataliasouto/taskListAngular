@@ -1,3 +1,4 @@
+import { Task } from './../models/task.model';
 import { TaskDialogComponent } from './../task-dialog/task-dialog.component';
 import { TaskService } from './../task.service';
 
@@ -30,7 +31,8 @@ export class TaskListComponent implements OnInit {
     this.taskService.update(task);
   }
 
-  showDialog(): void {
+  showDialog(task?: Task): void {
+    console.log(task);
     this.dialog.open(TaskDialogComponent);
   }
 
