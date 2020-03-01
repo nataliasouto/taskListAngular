@@ -1,6 +1,7 @@
 # TaskList
 
 Projeto gerado com Angular CLI 8
+Um aplicativo de página única para criação de uma Lista de Tarefas construído em angular com Firebase e Angular Material
 
 # Instalação
 
