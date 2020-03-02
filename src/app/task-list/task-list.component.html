@@ -5,18 +5,18 @@
         (performTask)="onPerformTask($event)"
         (selectTask)="selectedTask=$event"
         [matMenuTriggerFor]="taskMenu"
-        [matMenuTriggerData]="{taskToDelete: task}"
+        [matMenuTriggerData]="{taskToUpdateOrDelete: selectedTask}"
     >
     </app-task-item>
 </mat-nav-list>
 
 <mat-menu #taskMenu="matMenu" overlapTrigger="false">
-    <ng-template matMenuContent let-task="taskToDelete">
+    <ng-template matMenuContent let-task="taskToUpdateOrDelete">
         <button mat-menu-item (click)="showDialog(task)">
             <mat-icon> edit </mat-icon>
             <span> Update </span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="onDelete(task)">
             <mat-icon> delete </mat-icon>
             <span> Remove </span>
         </button>
