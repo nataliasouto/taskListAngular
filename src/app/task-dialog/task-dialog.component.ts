@@ -32,9 +32,8 @@ export class TaskDialogComponent implements OnInit {
       ? this.taskService.create(this.task)
       : this.taskService.update(this.task);
 
-    this.taskService.create(this.task)
+    operation
       .then(() => {
-        console.log('Task created!');
         this.dialogRef.close();
       });
   }
