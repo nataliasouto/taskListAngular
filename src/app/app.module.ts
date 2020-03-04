@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { MatToolbarModule, MatListModule, MatLineModule, MatButtonModule, MatIconModule, MatDialogModule, MatDialog, MatInputModule, MatFormFieldModule, MatMenuModule} from '@angular/material';
+import { MatToolbarModule, MatListModule, MatLineModule, MatButtonModule, MatIconModule, MatDialogModule, MatInputModule, MatFormFieldModule, MatMenuModule, MatProgressSpinnerModule} from '@angular/material';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   
 import { AppComponent } from './app.component';
@@ -40,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     TaskService
