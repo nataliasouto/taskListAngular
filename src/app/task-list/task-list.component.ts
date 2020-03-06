@@ -1,3 +1,4 @@
+import { take } from 'rxjs/operators';
 import { Task } from './../models/task.model';
 import { TaskDialogComponent } from './../task-dialog/task-dialog.component';
 import { TaskService } from './../task.service';
@@ -15,6 +16,7 @@ export class TaskListComponent implements OnInit {
 
   tasks$: Observable<Task[]>
   selectedTask: Task;
+  loading = true;
 
   constructor(
     private dialog: MatDialog,
@@ -23,7 +25,11 @@ export class TaskListComponent implements OnInit {
     
   ngOnInit(): void {
     this.tasks$ = this.taskService.tasks.valueChanges();
-  }
+
+    this.tasks$
+    .pipe(take(1))
+    .subscribe(() => this.loading = false);
+}
 
   onPerformTask(task: Task): void {
     task.done = !task.done;
