@@ -1,6 +1,6 @@
 import { Task } from './models/task.model';
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection, CollectionReference } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -15,7 +15,9 @@ export class TaskService {
    }
 
   private setTasks(): void {
-    this.tasks = this.db.collection<Task>('/tasks'); 
+    this.tasks = this.db.collection<Task>('/tasks',  
+    (ref: CollectionReference) => ref.orderBy('done', 'asc').orderBy('title', 'asc') ); 
+    
   }
   
   create(task: Task): Promise<void> {
